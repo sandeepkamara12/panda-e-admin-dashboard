@@ -1,0 +1,118 @@
+[
+    {
+        "icon": "bell",
+        "text": "Dashboard",
+        "sub": [
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            }
+        ]
+    },
+    {
+        "icon": "bell",
+        "text": "Orders",
+        "sub": [
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            }
+        ]
+    },
+    {
+        "icon": "bell",
+        "text": "Messages"
+    },
+    {
+        "icon": "bell",
+        "text": "Users",
+        "sub": [
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            }
+        ]
+    },
+    {
+        "icon": "bell",
+        "text": "Products",
+        "sub": [
+            {
+                "icon": "bell",
+                "text": "Add Product"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            }
+        ]
+    },
+    {
+        "icon": "bell",
+        "text": "Notifications"
+    },
+    {
+        "icon": "bell",
+        "text": "Invoices",
+        "sub": [
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            }
+        ]
+    },
+    {
+        "icon": "bell",
+        "text": "Settings",
+        "sub": [
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            },
+            {
+                "icon": "bell",
+                "text": "Sub Menu 1"
+            }
+        ]
+    }
+]
