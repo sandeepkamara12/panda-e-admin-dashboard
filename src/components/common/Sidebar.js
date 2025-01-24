@@ -31,7 +31,7 @@ const Sidebar = ({sidebar, hideSidebar}) => {
             
       
             <div className="hidden lg:block ms-2">
-      sdgsrh
+      
             </div>
           </div>
       

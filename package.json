@@ -8,6 +8,7 @@
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
+    "dropzone": "^6.0.0-beta.2",
     "postcss": "^8.5.1",
     "preline": "^2.7.0",
     "react": "^18.3.1",
