@@ -1,33 +1,26 @@
 import React from "react";
-
 const SingleImageUpload = () => {
   return (
     <>
-      <label
-        htmlFor="af-submit-app-upload-images"
-        className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200"
-      >
-        Preview image
-      </label>
       <div
         data-hs-file-upload='{
-        "url": "/upload",
-        "extensions": {
-            "default": {
-                "class": "shrink-0 size-5"
-                },
-                "xls": {
-                    "class": "shrink-0 size-5"
-                    },
-                    "zip": {
-                        "class": "shrink-0 size-5"
-          },
-          "csv": {
-            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/><path d=\"m5 12-3 3 3 3\"/><path d=\"m9 18 3-3-3-3\"/></svg>",
-            "class": "shrink-0 size-5"
-            }
+      "url": "/upload",
+      "extensions": {
+        "default": {
+          "class": "shrink-0 size-5"
+        },
+        "xls": {
+          "class": "shrink-0 size-5"
+        },
+        "zip": {
+          "class": "shrink-0 size-5"
+        },
+        "csv": {
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/><path d=\"m5 12-3 3 3 3\"/><path d=\"m9 18 3-3-3-3\"/></svg>",
+          "class": "shrink-0 size-5"
         }
-      }'
+      }
+    }'
       >
         <template data-hs-file-upload-preview="">
           <div className="p-3 bg-white border border-solid border-gray-300 rounded-xl dark:bg-neutral-800 dark:border-neutral-600">
@@ -37,11 +30,7 @@ const SingleImageUpload = () => {
                   className="size-10 flex justify-center items-center border border-gray-200 text-gray-500 rounded-lg dark:border-neutral-700 dark:text-neutral-500"
                   data-hs-file-upload-file-icon=""
                 >
-                  <img
-                    className="rounded-lg hidden"
-                    data-dz-thumbnail=""
-                    alt=""
-                  />
+                  <img className="rounded-lg hidden" data-dz-thumbnail="" alt="" />
                 </span>
                 <div>
                   <p className="text-sm font-medium text-gray-800 dark:text-white">
@@ -71,9 +60,9 @@ const SingleImageUpload = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path d="M3 6h18"></path>
                     <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
@@ -96,7 +85,7 @@ const SingleImageUpload = () => {
               >
                 <div
                   className="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition-all duration-500 hs-file-upload-complete:bg-green-500"
-                  style={{ width: "0" }}
+                  style={{"width": "0"}}
                   data-hs-file-upload-progress-bar-pane=""
                 ></div>
               </div>
@@ -123,9 +112,9 @@ const SingleImageUpload = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="17 8 12 3 7 8"></polyline>

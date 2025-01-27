@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@preline/combobox": "^2.5.2",
+    "@preline/copy-markup": "^2.5.2",
+    "@preline/file-upload": "^2.5.2",
+    "@preline/overlay": "^2.5.2",
     "@preline/select": "^2.5.2",
     "autoprefixer": "^10.4.20",
-    "bootstrap": "^5.3.3",
     "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
-    "dropzone": "^6.0.0-beta.2",
     "postcss": "^8.5.1",
     "preline": "^2.7.0",
     "react": "^18.3.1",
@@ -17,7 +19,7 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
-    "reactstrap": "^9.2.3",
+    "sortablejs": "^1.15.6",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
@@ -45,7 +47,13 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
     "@tailwindcss/forms": "^0.5.10",
-    "tailwindcss": "^3.4.17"
+    "@types/node": "^22.10.10",
+    "babel-loader": "^9.2.1",
+    "tailwindcss": "^3.4.17",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   }
 }
