@@ -4,3 +4,5 @@
  .colorpick-eyedropper-input-trigger {
     display: none;
  }
+ input[type="color" i]::-webkit-color-swatch-wrapper {padding:0;}
+ input[type="color" i]::-webkit-color-swatch {border-radius: 8px; border:none;}

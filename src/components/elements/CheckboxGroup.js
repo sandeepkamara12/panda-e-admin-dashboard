@@ -5,11 +5,11 @@ const CheckboxGroup = ({ label, options }) => {
     <div className="space-y-2">
       <label
         htmlFor="af-submit-app-description"
-        className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200"
+        className="inline-block text-sm font-medium text-gray-800 dark:text-neutral-200"
       >
         {label}
       </label>
-      <ul className="flex flex-col sm:flex-row">
+      <ul className="grid grid-cols-4 flex-col sm:flex-row">
         {options &&
           options?.length > 0 &&
           options?.map((option, index) => {
@@ -18,14 +18,14 @@ const CheckboxGroup = ({ label, options }) => {
                 <div className="relative flex items-start w-full">
                   <div className="flex items-center h-5">
                     <input
-                      id={`id-${option}`}
-                      name={`id-${option}`}
-                      type="checkbox"
-                      className="border-gray-200 rounded disabled:opacity-50 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                      id={`id-${option}${index}`}
+                      name="sizes"
+                      type="radio"
+                      className="border-gray-200 rounded-full disabled:opacity-50 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
                     />
                   </div>
                   <label
-                    htmlFor={`id-${option}`}
+                    htmlFor={`id-${option}${index}`}
                     className="ms-3.5 block w-full text-sm text-gray-600 dark:text-neutral-500"
                   >
                     {option}

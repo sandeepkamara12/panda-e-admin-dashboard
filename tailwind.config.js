@@ -15,6 +15,9 @@ module.exports = {
         'sidebar':'0 0 24px 2px rgba(20,25,38,.05)',
         'normal':'0 4px 24px 2px rgba(20,25,38,.05)',
       },
+      width: {
+        'adjust-color-width': 'calc(100% - 70px)',
+      },
       colors:{
         'tiny':'#575864'
       }

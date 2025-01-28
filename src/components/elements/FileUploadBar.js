@@ -3,7 +3,7 @@ import React from 'react'
 const FileUploadBar = () => {
   return (
     <div>
-      <div className="mb-2 flex justify-between items-center">
+      <div className="my-2 flex justify-between items-center">
         <div className="flex items-center gap-x-3">
           <span className="size-8 flex justify-center items-center border border-gray-200 text-gray-500 rounded-lg dark:border-neutral-700 dark:text-neutral-500">
             <svg className="shrink-0 size-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,27 +22,10 @@ const FileUploadBar = () => {
           </span>
           <div>
             <p className="text-sm font-medium text-gray-800 dark:text-white">preline-ui.xls</p>
-            <p className="text-xs text-gray-500 dark:text-neutral-500">7 KB</p>
           </div>
         </div>
         <div className="inline-flex items-center gap-x-2">
-          <button type="button" className="relative text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-800 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-500 dark:hover:text-neutral-200 dark:focus:text-neutral-200">
-            <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect width="4" height="16" x="6" y="4"></rect>
-              <rect width="4" height="16" x="14" y="4"></rect>
-            </svg>
-            <span className="sr-only">Pause</span>
-          </button>
-          <button type="button" className="relative text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-800 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-500 dark:hover:text-neutral-200 dark:focus:text-neutral-200">
-            <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 6h18"></path>
-              <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-              <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-              <line x1="10" x2="10" y1="11" y2="17"></line>
-              <line x1="14" x2="14" y1="11" y2="17"></line>
-            </svg>
-            <span className="sr-only">Delete</span>
-          </button>
+            <p className="text-xs text-gray-500 dark:text-neutral-500">7 KB</p>
         </div>
       </div>
     

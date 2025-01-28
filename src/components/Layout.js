@@ -12,7 +12,7 @@ const Layout = () => {
         <Sidebar sidebar={sidebar} hideSidebar={hideSidebar} />
         {/* <div className={`content-area px-5 w-full ${sidebar ? 'hide' : ''}`}> */}
           <Header sidebar={sidebar} hideSidebar={hideSidebar} />
-          <div className="w-full content-area p-4 sm:p-6">
+          <div className="w-full content-area">
             <Outlet />
           </div>
           <Footer />

@@ -5,7 +5,7 @@ const Textarea = ({label, placeholder, id}) => {
     <div className="space-y-2">
       <label
         htmlFor={id}
-        className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200"
+        className="inline-block text-sm font-medium text-gray-800 dark:text-neutral-200"
       >
         {label}
       </label>
