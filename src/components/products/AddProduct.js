@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "@preline/select";
 import DateTimePicker from "../elements/DateTimePicker";
-import FileUploadBar from "../elements/FileUploadBar";
 import Input from "../elements/Input";
 import Textarea from "../elements/Textarea";
 import SingleSelect from "../elements/SingleSelect";
-import MultiSelect from "../elements/MultiSelect";
 import CheckboxGroup from "../elements/CheckboxGroup";
 import ColorPicker from "../elements/ColorPicker";
 import MultipleImageUpload from "../elements/MultipleImageUpload";
@@ -25,6 +23,7 @@ const AddProduct = () => {
     "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80"
   ];
   const emptyVariation = {
+    variationId:1,
     uploadedImages:[{}]
   }
   const [variations, setVariations] = useState([{...emptyVariation}]);
@@ -69,13 +68,12 @@ const AddProduct = () => {
   }, []);
 
   const removeVariation = (variationId) => {
-    console.log(variationId, "Variation Id");
+    setVariations(variations.filter((variation) => variation?.id!==variationId))
   }
 
   const addVariation = (variationObject) => {
     setVariations(prev=>[...prev, {...emptyVariation}]);
   }
-  console.log(variations, 'hello')
 
   return (
     <div className="">
@@ -83,9 +81,9 @@ const AddProduct = () => {
         {/* Admin Inner Header */}
         <div className="flex items-center flex-wrap justify-between gap-5 mb-6 sticky top-[67px] bg-white z-50 py-4 border-b px-4 sm:px-6">
           <h3>Add Product</h3>
-          <div className="flex justify-center items-center gap-x-4">
+          <div className="flex justify-center items-center space-x-6">
             {/* Publish Btn */}
-
+            <DateTimePicker />
             <Datepicker />
             {/* Schedule Btn */}
             <div className="col-span-1">
@@ -116,7 +114,7 @@ const AddProduct = () => {
         <div className="px-4 sm:px-6">
           <div className="flex flex-wrap flex-col gap-y-6">
             <div className="flex flex-wrap p-6 flex-column rounded-md bg-white shadow-admin">
-              <div className="w-full grid grid-cols-3 gap-10">
+              <div className="w-full grid grid-cols-2 gap-10">
                 <div className="col-span-1 space-y-4">
                   {/* Product Name */}
                   <div className="grid grid-cols-3 gap-4">
@@ -153,25 +151,18 @@ const AddProduct = () => {
                     placeholder="Description"
                     id="product_description"
                   />
+                  
                 </div>
                 <div className="col-span-1 space-y-4">
                   <Textarea
                     label="Product Shipping / Return Policy"
                     placeholder="A breif info for product shipping and return policy."
                   />
-
                   {/* Product Additional Information */}
                   <Textarea
                     label="Additional Information"
                     placeholder="A breif info for product."
                   />
-                </div>
-                <div className="col-span-1 grid grid-cols-2 gap-10">
-                  <Datepicker />
-
-                  {/* Datepicker to schedule a sale for product */}
-                  {/* <Datepicker /> */}
-                  <DateTimePicker />
                 </div>
               </div>
             </div>
@@ -185,7 +176,7 @@ const AddProduct = () => {
                     return (       
                       <div className="p-6 bg-gray-500 rounded-md" key={index}>
                         <div>
-                          <div className="flex flex-wrap items-center justify-end pb-6" onClick={()=>removeVariation(variation?.id)}>
+                          <div className="flex flex-wrap items-center justify-end pb-6" onClick={()=>removeVariation(index)}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"

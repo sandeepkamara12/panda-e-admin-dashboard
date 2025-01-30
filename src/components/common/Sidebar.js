@@ -1,12 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import sidebarItems from '../../json/sidebar.json';
-const Sidebar = ({sidebar, hideSidebar}) => {
-    const [items] = useState(sidebarItems);
-    const [openIndex, setOpenIndex] = useState(null);
-
-    const toggleDropdown = (index, subItems) => {
-        setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-    };
+import React from 'react'
+const Sidebar = () => {
     return (
       <div id="hs-application-sidebar" className="hs-overlay [--body-scroll:true] lg:[--overlay-backdrop:false] [--is-layout-affect:true] [--auto-close:lg]
       hs-overlay-open:translate-x-0
@@ -196,70 +189,6 @@ const Sidebar = ({sidebar, hideSidebar}) => {
           
         </div>
       </div>
-    // <aside id="default-sidebar" 
-    // className={`${sidebar ? '-translate-x-full' : 'sm:translate-x-0'}`} 
-    // aria-label="Sidebar">
-    //     <div className='logo-wrapper'>
-    //         <a href="#" className="logo">
-    //             <img src="https://remosnextjs.vercel.app/images/logo/logo.png" alt="" />
-    //         </a>
-    //         <button type="button" onClick={()=>hideSidebar(!sidebar)} className="hidden xl:flex relative p-1 text-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-    //             <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-    //                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    //             </svg>
-    //         </button>
-    //     </div>
-    //     <div className="w-full h-full overflow-y-auto p-5">
-    //         <div className="center-heading">Main Home</div>
-    //         <ul className="font-medium">
-    //             {
-    //                 items && items.length>0 && items.map((item,index)=>{
-    //                     return (
-    //                         <li key={item?.text} className={`relative ${openIndex === index ? 'active' : ''}`}>
-    //                             <a href="#" className="flex items-center justify-between px-4 py-3 text-gray-900 rounded-lg hover:bg-gray-100 group">
-    //                                 <span className='flex flex-wrap items-center space-x-2'>
-    //                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900">
-    //                                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-    //                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
-    //                                     </svg>
-    //                                     <span className='text-sm'>{item?.text}</span>
-    //                                 </span>
-    //                                 {
-    //                                     item?.sub ? openIndex === index ? 
-    //                                         <svg onClick={()=>toggleDropdown(index, item?.sub)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 flex-shrink-0 w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900">
-    //                                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-    //                                         </svg>
-    //                                     :
-    //                                     <svg onClick={()=>toggleDropdown(index, item?.sub)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 flex-shrink-0 w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900">
-    //                                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-    //                                     </svg>
-    //                                     :null
-    //                                 }
-    //                             </a>
-    //                             <ul className={`sub-menu px-6 ${openIndex === index ? 'block': 'hidden'}`}>
-    //                                 {
-    //                                     item?.sub && item?.sub?.length>0 && item?.sub?.map((sub, key) => {
-    //                                         return (
-    //                                             <li key={key}>
-    //                                                 <a href="#" className="flex items-center space-x-2 p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-    //                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900">
-    //                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-    //                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
-    //                                                     </svg>
-    //                                                     <span className='text-sm'>{sub?.text}</span>
-    //                                                 </a>
-    //                                             </li>
-    //                                             )
-    //                                         })
-    //                                     }
-    //                             </ul>
-    //                         </li>            
-    //                     )
-    //                 })
-    //             }
-    //         </ul>
-    //     </div>
-    // </aside>
   )
 }
 

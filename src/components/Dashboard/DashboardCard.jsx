@@ -4,9 +4,9 @@ import SmoothLineChart from "../SmoothLineChart";
 const DashboardCard = ({ title, color, value, status }) => {
   return (
     <div className="flex flex-wrap p-6 space-y-6 rounded-md bg-white shadow-dashboard">
-      <div className="card-wrapper flex flex-wrap justify-between w-full">
-        <div className="flex flex-wrap items-center space-x-4">
-          <div className="relative w-[48px] h-[50px] flex flex-wrap items-center">
+      <div className="card-wrapper grid grid-cols-3 gap-2 w-full relative">
+        <div className="flex flex-wrap items-center col-span-2">
+          <div className="relative w-[43px] h-[45px] flex flex-wrap items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
@@ -34,14 +34,14 @@ const DashboardCard = ({ title, color, value, status }) => {
               />
             </svg>
           </div>
-          <div className="card-value">
+          <div className="card-value" style={{"width":"calc(100% - 48px)", "paddingLeft":"10px"}}>
             <p className="capitalize text-sm font-medium text-[#575864]">
-              Total Sales
+              {title}
             </p>
-            <h3 className="text-[22px] font-bold text-black">136,758</h3>
+            <h3 className="text-[20px] font-bold text-black">{value}</h3>
           </div>
         </div>
-        <div className="card-dropdown flex flex-wrap items-center space-x-2">
+        <div className="card-dropdown flex flex-wrap items-center justify-end col-span-1 space-x-2">
           {status !== "up" ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"

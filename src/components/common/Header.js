@@ -1,11 +1,7 @@
 import React from "react";
 import Searchbar from "./Searchbar";
-// import ActivityNotification from "../ActivityNotification";
-// import EmailNotification from "../EmailNotification";
-// import CartItemsDropdown from "../cart/CartItemsDropdown";
-// import ToggleTheme from "./ToggleTheme";
 
-const Header = ({ sidebar, hideSidebar }) => {
+const Header = () => {
   return (
     <>
       <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5">
