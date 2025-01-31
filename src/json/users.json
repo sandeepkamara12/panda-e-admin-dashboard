@@ -1,0 +1,52 @@
+[
+    {
+        "user_id":1,
+        "userName": "John Doe",
+        "phone": "+1-202-555-0143",
+        "email": "johndoe@example.com",
+        "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+        "address": "1234 Elm Street, Springfield, IL, USA",
+        "description": "Software engineer with a passion for open-source projects.",
+        "createdAt": "2024-01-30T12:00:00Z"
+    },
+    {
+        "user_id":2,
+        "userName": "Jane Smith",
+        "phone": "+44-7895-555555",
+        "email": "janesmith@example.co.uk",
+        "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+        "address": "56 Oak Avenue, London, UK",
+        "description": "Digital marketer and content creator.",
+        "createdAt": "2024-01-29T14:30:00Z"
+    },
+    {
+        "user_id":3,
+        "userName": "Alice Johnson",
+        "phone": "+33-6-55-44-33-22",
+        "email": "alicej@example.fr",
+        "picture": "https://randomuser.me/api/portraits/women/3.jpg",
+        "address": "89 Rue de Paris, Lyon, France",
+        "description": "Graphic designer specializing in brand identity.",
+        "createdAt": "2024-01-28T09:15:00Z"
+    },
+    {
+        "user_id":4,
+        "userName": "Bob Williams",
+        "phone": "+49-152-555-6677",
+        "email": "bobwilliams@example.de",
+        "picture": "https://randomuser.me/api/portraits/men/4.jpg",
+        "address": "21 Berlin Strasse, Berlin, Germany",
+        "description": "Freelance photographer with a focus on urban landscapes.",
+        "createdAt": "2024-01-27T18:45:00Z"
+    },
+    {
+        "user_id":5,
+        "userName": "Sophia Martinez",
+        "phone": "+34-612-789-123",
+        "email": "sophiam@example.es",
+        "picture": "https://randomuser.me/api/portraits/women/5.jpg",
+        "address": "34 Calle Mayor, Madrid, Spain",
+        "description": "Entrepreneur and business consultant.",
+        "createdAt": "2024-01-26T21:10:00Z"
+    }
+]

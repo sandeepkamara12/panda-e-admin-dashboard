@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from "./pages/Dashboard"
 import Layout from "./components/Layout"
 import AddProduct from './components/products/AddProduct';
+import UserList from './components/user/UserList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/admin" element={<Layout />}>
           <Route index element={<Dashboard />}></Route>
           <Route path="add-product" element={<AddProduct />}></Route>
+          <Route path="users" element={<UserList />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
