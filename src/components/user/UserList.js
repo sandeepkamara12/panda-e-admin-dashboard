@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import userData from '../../json/users.json';
 
-const UserList = () => {
+const UserList = ({classes}) => {
   const [users, setUsers] = useState([]);
 
   useEffect(()=>{
@@ -9,7 +9,7 @@ const UserList = () => {
   },[])
 
   return (
-    <div className="p-4 sm:p-6">
+    <div className={classes}>
       <div className="flex flex-col">
         <div className="-m-1.5 overflow-x-auto">
           <div className="p-1.5 min-w-full inline-block align-middle">
