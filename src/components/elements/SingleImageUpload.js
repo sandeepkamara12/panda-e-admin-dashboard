@@ -85,7 +85,7 @@ const SingleImageUpload = () => {
               >
                 <div
                   className="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition-all duration-500 hs-file-upload-complete:bg-green-500"
-                  style={{"width": "0"}}
+                  style={{width: "0"}}
                   data-hs-file-upload-progress-bar-pane=""
                 ></div>
               </div>

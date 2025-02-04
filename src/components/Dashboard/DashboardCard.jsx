@@ -34,7 +34,7 @@ const DashboardCard = ({ title, color, value, status }) => {
               />
             </svg>
           </div>
-          <div className="card-value" style={{"width":"calc(100% - 48px)", "paddingLeft":"10px"}}>
+          <div className="card-value" style={{width:"calc(100% - 48px)", paddingLeft:"10px"}}>
             <p className="capitalize text-sm font-medium text-[#575864]">
               {title}
             </p>

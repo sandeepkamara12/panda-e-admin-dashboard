@@ -5,6 +5,7 @@ import Layout from "./components/Layout"
 import AddProduct from './components/products/AddProduct';
 import UserList from './components/user/UserList';
 import AddCategory from './components/products/AddCategory';
+import Categories from './pages/Categories';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/admin" element={<Layout />}>
           <Route index element={<Dashboard />}></Route>
           <Route path="add-product" element={<AddProduct />}></Route>
-          <Route path="add-category" element={<AddCategory />}></Route>
+          <Route path="add-category" element={<AddCategory classes="p-4 sm:p-6" />}></Route>
+          <Route path="categories" element={<Categories classes="p-4 sm:p-6" />}></Route>
           <Route path="users" element={<UserList classes="p-4 sm:p-6" />}></Route>
         </Route>
       </Routes>

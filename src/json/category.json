@@ -1,0 +1,42 @@
+[
+    {
+        "category_id":1,
+        "categoryName": "John Doe",
+        "productAssigned": "14",
+        "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+        "description": "Software engineer with a passion for open-source projects.",
+        "createdAt": "2024-01-30T12:00:00Z"
+    },
+    {
+        "category_id":2,
+        "categoryName": "Jane Smith",
+        "productAssigned": "4",
+        "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+        "description": "Digital marketer and content creator.",
+        "createdAt": "2024-01-29T14:30:00Z"
+    },
+    {
+        "category_id":3,
+        "categoryName": "Alice Johnson",
+        "productAssigned": "10",
+        "picture": "https://randomuser.me/api/portraits/women/3.jpg",
+        "description": "Graphic designer specializing in brand identity.",
+        "createdAt": "2024-01-28T09:15:00Z"
+    },
+    {
+        "category_id":4,
+        "categoryName": "Bob Williams",
+        "productAssigned": "8",
+        "picture": "https://randomuser.me/api/portraits/men/4.jpg",
+        "description": "Freelance photographer with a focus on urban landscapes.",
+        "createdAt": "2024-01-27T18:45:00Z"
+    },
+    {
+        "category_id":5,
+        "categoryName": "Sophia Martinez",
+        "productAssigned": "100",
+        "picture": "https://randomuser.me/api/portraits/women/5.jpg",
+        "description": "Entrepreneur and business consultant.",
+        "createdAt": "2024-01-26T21:10:00Z"
+    }
+]
