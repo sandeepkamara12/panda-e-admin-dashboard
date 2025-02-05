@@ -81,6 +81,17 @@ const UserList = ({classes}) => {
                     >
                       <div className="flex items-center gap-x-2">
                         <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
+                          User ID
+                        </span>
+                      </div>
+                    </th>
+                    
+                    <th
+                      scope="col"
+                      className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start"
+                    >
+                      <div className="flex items-center gap-x-2">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
                           Name
                         </span>
                       </div>
@@ -110,12 +121,19 @@ const UserList = ({classes}) => {
                       </div>
                     </th>
 
+                    <th scope="col" className="px-6 py-3 text-start">
+                      <div className="flex items-center gap-x-2">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
+                          Verified
+                        </span>
+                      </div>
+                    </th>
+
                     <th scope="col" className="px-6 py-3 text-end"></th>
                   </tr>
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 dark:divide-neutral-700">
-                  {console.log(users, 'hi')}
                   {
                     users && users?.length >0 && users?.map(user=>{
                       return (
@@ -130,6 +148,11 @@ const UserList = ({classes}) => {
                                 />
                                 <span className="sr-only">Checkbox</span>
                               </label>
+                            </div>
+                          </td>
+                          <td className="size-px">
+                            <div className="ps-6 py-3">
+                                {user?.user_id}
                             </div>
                           </td>
                           <td className="size-px whitespace-nowrap">
@@ -172,14 +195,35 @@ const UserList = ({classes}) => {
                             </div>
                           </td>
 
-                          <td className="size-px whitespace-nowrap">
+                          <td className="size-px">
                             <div className="px-6 py-3">
                               <span className="text-sm text-gray-500 dark:text-neutral-500">
                                 {user?.createdAt}
                               </span>
                             </div>
                           </td>
-                          <td className="size-px whitespace-nowrap">
+                          
+                          <td className="size-px">
+                            <div className="px-6 py-3">
+                              {/* <span className="text-sm text-gray-500 dark:text-neutral-500"> */}
+                                {
+                                  user?.emailVerified && user?.phoneVerified ? 
+                                    <span class="w-[100px] justify-center py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+                                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                      </svg>Verified
+                                    </span> 
+                                    : <span class="w-[100px] justify-center py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-red-100 text-red-800 rounded-full dark:bg-red-500/10 dark:text-red-500">
+                                        <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                        </svg>Not Verified
+                                      </span>
+                                }
+                              {/* </span> */}
+                            </div>
+                          </td>
+
+                          <td className="size-px">
                             <div className="px-6 py-1.5">
                               <a
                                 className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"

@@ -167,11 +167,9 @@ const AddProduct = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap p-6 flex-column rounded-md bg-white shadow-admin">
-             
+            <div className="flex flex-wrap p-6 flex-column rounded-md bg-white shadow-admin">             
               <div className="space-y-6">
                 {
-
                   variations && variations?.length>0 && variations?.map((variation, index)=>{
                     return (       
                       <div className="p-6 bg-gray-500 rounded-md" key={index}>

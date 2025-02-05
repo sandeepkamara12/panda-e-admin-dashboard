@@ -6,7 +6,7 @@ import OrderList from "../components/order/OrderList";
 const Dashboard = () => {
   return (
     <div className="p-4 sm:p-6">
-      <div className="grid grid-rows-1 grid-cols-6 space-x-4 sm:space-x-3 mb-7">
+      <div className="grid grid-rows-1 grid-cols-5 space-x-4 sm:space-x-3 mb-7">
         <DashboardCard
           title="Total Sales"
           color="#22c55e"
@@ -31,12 +31,12 @@ const Dashboard = () => {
           value="34,945"
           status="up"
         />
-        <DashboardCard
+        {/* <DashboardCard
           title="Ongoing Orders"
           color="#2377FC"
           value="34,945"
           status="up"
-        />
+        /> */}
         <DashboardCard
           title="Total Customers"
           color="#2377FC"

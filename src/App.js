@@ -4,8 +4,12 @@ import Dashboard from "./pages/Dashboard"
 import Layout from "./components/Layout"
 import AddProduct from './components/products/AddProduct';
 import UserList from './components/user/UserList';
-import AddCategory from './components/products/AddCategory';
 import Categories from './pages/Categories';
+import Orders from './pages/Orders';
+import Variations from './pages/Variations';
+import Invoices from './pages/Invoices';
+import Messages from './pages/Messages';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -15,11 +19,15 @@ function App() {
           {/* <Route index element={<Dashboard />}></Route> */}
         </Route>
         <Route path="/admin" element={<Layout />}>
-          <Route index element={<Dashboard />}></Route>
-          <Route path="add-product" element={<AddProduct />}></Route>
-          <Route path="add-category" element={<AddCategory classes="p-4 sm:p-6" />}></Route>
-          <Route path="categories" element={<Categories classes="p-4 sm:p-6" />}></Route>
+          <Route path="dashboard" element={<Dashboard />}></Route>
           <Route path="users" element={<UserList classes="p-4 sm:p-6" />}></Route>
+          <Route path="categories" element={<Categories classes="p-4 sm:p-6" />}></Route>
+          <Route path="products" element={<AddProduct />}></Route>
+          <Route path="orders" element={<Orders classes="p-4 sm:p-6" />}></Route>
+          <Route path="variations" element={<Variations classes="p-4 sm:p-6" />}></Route>
+          <Route path="invoices" element={<Invoices classes="p-4 sm:p-6" />}></Route>
+          <Route path="messages" element={<Messages classes="p-4 sm:p-6" />}></Route>
+          <Route path="settings" element={<Settings classes="p-4 sm:p-6" />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

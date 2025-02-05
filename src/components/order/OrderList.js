@@ -1,7 +1,11 @@
 import React from "react";
 import Tooltip from "../elements/Tooltip";
+import Searchbar from "../common/Searchbar";
+import SingleSelect from "../elements/SingleSelect";
+import Datepicker from "../elements/Datepicker";
 
 const OrderList = () => {
+  const status = ["Pending", "Shipped", "Cancel", "Received"];
   return (
     <div className="flex flex-col">
       <div className="-m-1.5 overflow-x-auto">
@@ -13,17 +17,26 @@ const OrderList = () => {
                   Orders
                 </h2>
                 <p className="text-sm text-gray-600 dark:text-neutral-400">
-                  Accept order, reject and more.
+                  View accept and delete orders.
                 </p>
               </div>
-
               <div>
                 <div className="inline-flex gap-x-2">
+                  <Datepicker />
+                  <div className="span-cols-1">
+                    {/* Order Status */}
+                    <SingleSelect
+                      label="Order Status"
+                      placeholder="Select Status"
+                      options={status}
+                    />
+                  </div>
+                  <Searchbar />
                   <a
                     className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
                     href="#"
                   >
-                    View all
+                    Delete all
                   </a>
                 </div>
               </div>
@@ -49,7 +62,7 @@ const OrderList = () => {
                   <th scope="col" className="px-6 py-3 text-start">
                     <div className="flex items-center gap-x-2">
                       <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
-                        Order Id
+                        Id
                       </span>
                     </div>
                   </th>
@@ -316,6 +329,25 @@ const OrderList = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+                        href="#"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={2}
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                           />
                         </svg>
                       </a>

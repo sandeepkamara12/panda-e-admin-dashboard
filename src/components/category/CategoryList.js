@@ -18,7 +18,7 @@ const CategoryList = ({classes}) => {
                     Categories
                   </h2>
                   <p className="text-sm text-gray-600 dark:text-neutral-400">
-                    Add categories, edit and more.
+                    Update and delete categories.
                   </p>
                 </div>
               </div>
@@ -38,6 +38,17 @@ const CategoryList = ({classes}) => {
                         />
                         <span className="sr-only">Checkbox</span>
                       </label>
+                    </th>
+
+                    <th
+                      scope="col"
+                      className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start"
+                    >
+                      <div className="flex items-center gap-x-2">
+                        <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
+                          ID
+                        </span>
+                      </div>
                     </th>
 
                     <th
@@ -86,6 +97,11 @@ const CategoryList = ({classes}) => {
                                 />
                                 <span className="sr-only">Checkbox</span>
                               </label>
+                            </div>
+                          </td>
+                          <td className="size-px whitespace-nowrap">
+                            <div className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start">
+                              {category?.category_id}
                             </div>
                           </td>
                           <td className="size-px whitespace-nowrap">

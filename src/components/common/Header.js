@@ -1,7 +1,7 @@
 import React from "react";
 import Searchbar from "./Searchbar";
 
-const Header = () => {
+const Header = ({ pathname }) => {
   return (
     <>
       <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5">
@@ -99,14 +99,14 @@ const Header = () => {
                   </svg>
                 </li>
                 <li
-                  className="text-sm font-semibold text-gray-800 truncate dark:text-neutral-400"
+                  className="text-sm font-semibold text-gray-800 truncate dark:text-neutral-400 capitalize"
                   aria-current="page"
                 >
-                  Dashboard
+                  {pathname}
                 </li>
               </ol>
             </div>
-            <div className="flex flex-row items-center justify-end gap-1">
+            <div className="flex flex-row items-center justify-end gap-3">
               <Searchbar />
               <button
                 type="button"
@@ -132,10 +132,10 @@ const Header = () => {
 
               <button
                 type="button"
-                className="size-[38px] relative inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                className="size-[46px] relative inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-800 bg-gray-100 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
               >
                 <svg
-                  className="shrink-0 size-4"
+                  className="shrink-0 size-5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -149,41 +149,51 @@ const Header = () => {
                   <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                   <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
                 </svg>
-                <span className="sr-only">Notifications</span>
+                <span class="flex absolute top-0 end-0 size-2">
+                  <span class="animate-ping absolute inline-flex size-full rounded-full bg-red-400 opacity-75 dark:bg-red-600"></span>
+                  <span class="relative inline-flex rounded-full size-2 bg-red-500"></span>
+                </span>
+                {/* <span className="sr-only">Notifications</span> */}
               </button>
 
               <button
                 type="button"
-                className="size-[38px] relative inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                className="size-[46px] relative inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-800 bg-gray-100 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
               >
                 <svg
-                  className="shrink-0 size-4"
                   xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  fill="none"
+                  strokeWidth={2}
                   stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  className="size-5"
                 >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                  />
                 </svg>
-                <span className="sr-only">Activity</span>
+                <span class="flex absolute top-0 end-0 size-2">
+                  <span class="animate-ping absolute inline-flex size-full rounded-full bg-red-400 opacity-75 dark:bg-red-600"></span>
+                  <span class="relative inline-flex rounded-full size-2 bg-red-500"></span>
+                </span>
+                {/* <span className="sr-only">Activity</span> */}
               </button>
 
               <div className="hs-dropdown [--placement:bottom-right] relative inline-flex">
                 <button
                   id="hs-dropdown-account"
                   type="button"
-                  className="size-[38px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+                  className="size-[46px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-800 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                   aria-haspopup="menu"
                   aria-expanded="false"
                   aria-label="Dropdown"
                 >
                   <img
-                    className="shrink-0 size-[38px] rounded-full"
+                    className="shrink-0 size-[46px] rounded-lg"
                     src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
                     alt="Avatar"
                   />
@@ -297,7 +307,6 @@ const Header = () => {
           </div>
         </nav>
       </header>
-     
     </>
     // <div className='hidden xl:flex'>
     //     <nav className="bg-gray-800 fixed top-0 left-0 right-0">

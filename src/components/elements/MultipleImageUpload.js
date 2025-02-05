@@ -6,8 +6,8 @@ import Sortable from "sortablejs";
 const MultipleImageUpload = ({ uploadedImages }) => {
   const sortableRef = useRef(null);
   useEffect(() => {
-    if (sortableRef.current) {
-      new Sortable(sortableRef.current, {
+    if (sortableRef?.current) {
+      new Sortable(sortableRef?.current, {
         animation: 150,
         dragClass: "!rounded-none",
       });
